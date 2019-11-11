@@ -3,9 +3,9 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/make-school-labs/golang-starter-pack)](https://goreportcard.com/report/github.com/make-school-labs/golang-starter-pack)
 [![Build Status](https://travis-ci.org/make-school-labs/golang-starter-pack.svg?branch=master)](https://travis-ci.org/make-school-labs/golang-starter-pack)
 
-Golang/Echo codebase containing real world examples that adhere to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
+Codebase containing real world examples that adhere to the [RealWorld](https://github.com/gothinkster/realworld) API and specifications.
 
-This codebase was created to demonstrate a fully fledged full-stack application built with **Golang, Echo, and Gorm**.
+Created to demonstrate a complete full-stack application built with **Golang, Echo, and Gorm**.
 
 ## Features
 
@@ -14,6 +14,45 @@ This codebase was created to demonstrate a fully fledged full-stack application 
 - Routing
 - Pagination
 - ...and more!
+
+## Directory Structure
+
+```bash
+├── main.go
+├── article
+│   └── article.go
+├── db
+│   └── db.go
+├── handler
+│   ├── article.go
+│   ├── article_test.go
+│   ├── handler.go
+│   ├── handler_test.go
+│   ├── request.go
+│   ├── response.go
+│   ├── routes.go
+│   ├── user.go
+│   └── user_test.go
+├── model
+│   ├── article.go
+│   └── user.go
+├── router
+│   ├── middleware
+│   │   └── jwt.go
+│   ├── router.go
+│   └── validator.go
+├── store
+│   ├── article.go
+│   └── user.go
+├── user
+│   └── user.go
+└── utils
+    ├── errors.go
+    ├── jwt.go
+    └── utils.go
+
+9 directories, 33 files
+```
 
 ## Requirements
 
@@ -27,35 +66,32 @@ This codebase was created to demonstrate a fully fledged full-stack application 
 Clone this repository:
 
 ```bash
-$ git clone https://github.com/make-school-labs/golang-starter-pack.git ~/go/src/PROJECT_NAME_HERE
-
-$ cd ~/go/src/PROJECT_NAME_HERE
+git clone https://github.com/make-school-labs/golang-starter-pack.git ~/go/src/PROJECT_NAME_HERE
+cd ~/go/src/PROJECT_NAME_HERE
 ```
 
 ### Install Dependencies
 
 ```bash
-$ export GO111MODULE=on;
-
-$ go mod download
+export GO111MODULE=on && go mod download
 ```
 
 ### Run
 
 ```bash
-$ go run main.go
+go run main.go
 ```
 
 ### Build
 
 ```bash
-$ go build
+go build
 ```
 
 ### Tests
 
 ```bash
-$ go test ./...
+go test ./...
 ```
 
 ## Credits
